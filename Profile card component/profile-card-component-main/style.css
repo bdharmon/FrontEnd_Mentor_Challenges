@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    background-color: hsl(185, 75%, 39%);
+    flex-direction: column;
+    font-family: 'Kumbh Sans', sans-serif;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+}
+
+p {
+    color: hsl(227, 10%, 46%);
+}
+
+ul {
+    list-style: none;
+}
+
+/* BACKGROUND CIRCLES */
+.bg-img-top {
+    position: relative;
+    right: 500px;
+    top: 250px;
+    z-index: -1;
+}
+
+.bg-img-bottom {
+    position: relative;
+    left: 550px;
+    bottom: 250px;
+    z-index: -1;
+}
+
+/* PROFILE CARD */
+#age {
+    grid-area: age;
+}
+
+.card {
+    align-items: center;
+    display: grid;
+    background-color: white;
+    border-radius: 10px;
+    grid-template-rows: repeat(3, auto);
+    justify-items: center;
+    margin: 15px;
+    max-width: 1440px;
+}
+
+.card-bg-img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+}
+
+#location {
+    grid-area: location;
+    margin-bottom: 30px;
+}
+
+#name {
+    color: hsl(229, 23%, 23%);
+    grid-area: name;
+    margin-right: 15px;
+}
+
+.profile-about {
+    align-items: center;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "name age"
+    "location location"
+    ;
+    justify-items: center;
+    row-gap: 15px;
+}
+
+.profile-pic {
+    border: 4px solid white;
+    border-radius: 50%;
+    position: relative;
+    bottom: 50px;
+}
+
+.profile-top {
+    align-content: center;
+    display: grid;
+    justify-items: center;
+}
+
+.stats-container {
+    align-content: center;
+    border-top: 1px solid hsl(227, 10%, 46%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    padding: 30px;
+    width: 100%;
+}
+
+.stats-container li {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.5;
+}
+
+.stats-container li p:first-child {
+    color: hsl(229, 23%, 23%);
+    font-weight: 700;
+}
+
+/* ---------- MOBILE ---------- */
+@media only screen and (max-width: 768px) {  
+    .bg-img-bottom {
+        bottom: 350px;
+    }
+
+    .card {
+        margin: 30px;
+    }
+}
