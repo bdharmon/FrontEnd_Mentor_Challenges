@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    background-color: hsl(240, 78%, 98%);
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    align-items: center;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    margin: 40px 0;
+    row-gap: 70px;
+    justify-items: center;
+}
+
+/* Toggle Container */
+.toggle-box {
+    align-items: center;
+    color: hsl(233, 13%, 49%);
+    display: grid;
+    font-size: 1.2rem;
+    grid-template-rows: repeat(2, auto);
+    justify-items: center;
+    row-gap: 30px;
+}
+
+.toggle-selector {
+    align-items: center;
+    color: hsl(234, 14%, 74%);
+    column-gap: 10px;
+    display: grid;
+    font-size: 1rem;
+    grid-template-columns: repeat(3, auto);
+    justify-items: center;
+}
+
+/* Toggle Switch Button */
+.checkbox {
+    height: 0;
+    opacity: 0;
+    width: 0;
+}
+
+.switch {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: relative;
+}
+
+.switch:hover {
+    opacity: 0.7;
+}
+
+.toggle-thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.toggle-thumb::before {
+    background-color: white;
+    border-radius: 50%;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s all ease;
+    width: 26px;
+}
+
+.checkbox:checked + .toggle-thumb:before {
+    transform: translateX(26px);
+}
+
+/* ---------- Prices Container ---------- */
+/* Button */
+button {
+    border: none;
+    border-radius: 7px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    height: 40px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.prices-box .prices:first-child button, .prices-box .prices:nth-child(3) button {
+    background-image: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+}
+
+.prices-box .prices:first-child button:hover, .prices-box .prices:nth-child(3) button:hover {
+    background: none;
+    border: 1.5px solid hsl(237, 63%, 64%);
+    color: hsl(237, 63%, 64%);
+}
+
+.prices-box .prices:nth-child(2) button {
+    background-color: white;
+    color: hsl(237, 63%, 64%);
+}
+
+.prices-box .prices:nth-child(2) button:hover {
+    background: none;
+    border: 1.5px solid white;
+    color: white;
+}
+
+/* Prices */
+.monthly, .annually {
+    font-size: 3rem;
+    margin-top: 20px;
+    width: 196px;
+}
+
+.monthly {
+    display: none;
+}
+
+/* Price boxes */
+.prices-box {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-items: center;
+}
+
+.prices {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+}
+
+.prices-box .prices:first-child, .prices-box .prices:nth-child(3) {
+    background-color: white;
+    color: hsl(232, 13%, 33%);
+}
+
+.prices-box .prices:nth-child(2) {
+    background-image: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: 10px;
+    color: white;
+    padding: 40px 20px;
+}
+
+.prices-box .prices:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.prices-box .prices:nth-child(3) {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.prices ul {
+    align-items: center;
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    justify-items: center;
+}
+
+.prices-box .prices:first-child ul li, .prices-box .prices:nth-child(3) ul li {
+    border-bottom: 1px solid hsla(234, 14%, 74%, 0.4);
+    padding: 20px;
+    width: 100%;
+}
+
+.prices:nth-child(2) ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    width: 100%;
+}
+
+/* --------- MOBILE --------- */
+@media (max-width: 815px) {
+    .container {
+        row-gap: 40px;
+    }
+
+    .prices-box {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        row-gap: 20px;
+    }
+
+    .prices {
+        border-radius: 10px;
+    }
+}
