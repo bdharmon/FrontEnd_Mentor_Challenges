@@ -1,0 +1,2 @@
+![Design preview for the Social media dashboard with theme switcher coding challenge](./design/desktop-design-dark.jpg)
+![Design preview for the Social media dashboard with theme switcher coding challenge](./design/desktop-design-light.jpg)
