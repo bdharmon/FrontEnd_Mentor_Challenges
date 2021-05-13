@@ -169,8 +169,6 @@ html {
     column-gap: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, auto));
-    /* grid-template-columns: repeat(4, auto); */
-    /* grid-template-rows: repeat(auto-fill, auto); */
     margin: 50px 0;
     width: 100%;
 }
@@ -305,9 +303,7 @@ html {
 .overview-section {
     display: grid;
     column-gap: 20px;
-    /* grid-template-columns: repeat(4, auto); */
     grid-template-columns: repeat(auto-fit, minmax(280px, auto));
-    /* grid-template-rows: repeat(2, auto); */
     row-gap: 20px;
     width: 100%;
 }
